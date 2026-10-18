@@ -18,6 +18,13 @@ function install_apps {
 }
 
 
+function install_ai_tools {
+  # claude
+  curl -fsSL https://claude.ai/install.sh | bash
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+}
+
+
 function setting {
   cp ${VIMRC_PATH} ${HOME}/.vimrc 
   cp ${TMUX_CONF_PATH} ${HOME}/.tmux.conf
@@ -26,6 +33,9 @@ function setting {
 
 function main {
   install_apps
+  install_ai_tools
+  setting
+  echo "Finished all, pls run `source ~/.bashrc`"
 }
 
 
