@@ -12,7 +12,7 @@ function install_apps {
   sudo apt update --yes
   sudo apt install neovim --yes
   sudo apt install tree --yes
-  suso apt install tmux --yes
+  sudo apt install tmux --yes
 
   # Install micromamba 
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh) < /dev/null
